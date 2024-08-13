@@ -1,44 +1,35 @@
-public class Mouse {
-    private String model;
-    private boolean wireless;
+import java.util.Objects;
+
+public class Mouse extends Product {
     private int sensitivity;
-    private double price;
 
-    public Mouse(String model, boolean wireless, int sensitivity, double price) {
-        this.model = model;
-        this.wireless = wireless;
-        this.sensitivity = sensitivity;
-        this.price = price;
-    }
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public boolean isWireless() {
-        return wireless;
-    }
-
-    public void setWireless(boolean wireless) {
-        this.wireless = wireless;
-    }
-
-    public int getSensitivity() {
-        return sensitivity;
-    }
-
-    public void setSensitivity(int sensitivity) {
+    public Mouse(String producer, String model, double price, boolean isNew, int sensitivity) {
+        super(producer, model, price, isNew);
         this.sensitivity = sensitivity;
     }
 
-    public double getPrice() {
-        return price;
+    @Override
+    public double calculateDiscountedPrice(double discountPercentage) {
+        double discount = getPrice() * (discountPercentage / 100);
+        return getPrice() - discount;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Mouse mouse)) return false;
+        return sensitivity == mouse.sensitivity;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(sensitivity);
+    }
+
+    @Override
+    public String toString() {
+        return "Mouse{" +
+                "sensitivity=" + sensitivity +
+                '}';
     }
 }

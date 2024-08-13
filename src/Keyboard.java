@@ -1,35 +1,36 @@
-public class Keyboard {
-    private String model;
+import java.util.Objects;
+
+public class Keyboard extends Product {
     private String type;
-    private double price;
 
-    public Keyboard(String model, String type, double price) {
-        this.model = model;
-        this.type = type;
-        this.price = price;
-    }
 
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
+    public Keyboard(String producer, String model, double price, boolean isNew, String type) {
+        super(producer, model, price, isNew);
         this.type = type;
     }
 
-    public double getPrice() {
-        return price;
+    @Override
+    public double calculateDiscountedPrice(double discountPercentage) {
+        double discount = getPrice() * (discountPercentage / 100);
+        return getPrice() - discount;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Keyboard keyboard)) return false;
+        return Objects.equals(type, keyboard.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(type);
+    }
+
+    @Override
+    public String toString() {
+        return "Keyboard{" +
+                "type='" + type + '\'' +
+                '}';
     }
 }

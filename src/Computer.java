@@ -1,29 +1,23 @@
-public class Computer {
-    private String cpu;
-    private String gpu;
-    private String motherboard;
-    private String caseModel;
-    private double price;
-    private Keyboard keyboard;
-    private Display display;
-    private Mouse mouse;
+import java.util.Objects;
+
+public class Computer extends Product{
+    protected String cpu;
+    protected String gpu;
+    protected int ram;
+    protected Keyboard keyboard;
 
 
-    public double totalPrice(double pcPrice, double monitorPrice, double keyboardPrice, double mousePrice){
-        return Math.floor((pcPrice + monitorPrice + keyboardPrice + mousePrice)*100)/100;
-    }
+    protected PCMonitor pcMonitor;
+    protected Mouse mouse;
 
-    public Computer(String cpu, String gpu, String motherboard, String caseModel, double price, Keyboard keyboard, Display display, Mouse mouse) {
+    public Computer(String producer, String model, double price, boolean isNew, String cpu, String gpu, int ram, Keyboard keyboard, PCMonitor pcMonitor, Mouse mouse){
+        super(producer, model, price, isNew);
         this.cpu = cpu;
         this.gpu = gpu;
-        this.motherboard = motherboard;
-        this.caseModel = caseModel;
-        this.price = price;
+        this.ram = ram;
         this.keyboard = keyboard;
-        this.display = display;
-        this.mouse = mouse;
+        this.pcMonitor = pcMonitor;
     }
-
     public String getCpu() {
         return cpu;
     }
@@ -40,28 +34,66 @@ public class Computer {
         this.gpu = gpu;
     }
 
-    public String getMotherboard() {
-        return motherboard;
+    public int getRam() {
+        return ram;
     }
 
-    public void setMotherboard(String motherboard) {
-        this.motherboard = motherboard;
+    public void setRam(int ram) {
+        this.ram = ram;
     }
 
-    public String getCaseModel() {
-        return caseModel;
+    public Keyboard getKeyboard() {
+        return keyboard;
     }
 
-    public void setCaseModel(String caseModel) {
-        this.caseModel = caseModel;
+    public void setKeyboard(Keyboard keyboard) {
+        this.keyboard = keyboard;
     }
 
-    public double getPrice() {
-        return price;
+    public PCMonitor getPcMonitor() {
+        return pcMonitor;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setPcMonitor(PCMonitor pcMonitor) {
+        this.pcMonitor = pcMonitor;
+    }
+
+    public Mouse getMouse() {
+        return mouse;
+    }
+
+    public void setMouse(Mouse mouse) {
+        this.mouse = mouse;
+    }
+
+    @Override
+    public double calculateDiscountedPrice(double discountPercentage) {
+        double discount = getPrice() * (discountPercentage / 100);
+        return getPrice() - discount;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Computer computer)) return false;
+        return ram == computer.ram && Objects.equals(cpu, computer.cpu) && Objects.equals(gpu, computer.gpu) && Objects.equals(keyboard, computer.keyboard) && Objects.equals(pcMonitor, computer.pcMonitor) && Objects.equals(mouse, computer.mouse);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cpu, gpu, ram, keyboard, pcMonitor, mouse);
+    }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "cpu='" + cpu + '\'' +
+                ", gpu='" + gpu + '\'' +
+                ", ram=" + ram +
+                ", keyboard=" + keyboard +
+                ", pcMonitor=" + pcMonitor +
+                ", mouse=" + mouse +
+                '}';
     }
 }
 
