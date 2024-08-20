@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Computer extends Product{
+public class Computer extends Product implements Powerable, Wifi {
     protected String cpu;
     protected String gpu;
     protected int ram;
@@ -94,6 +94,16 @@ public class Computer extends Product{
                 ", pcMonitor=" + pcMonitor +
                 ", mouse=" + mouse +
                 '}';
+    }
+
+    @Override
+    public void powerOn() {
+        System.out.println("I am now powered on.");
+    }
+
+    @Override
+    public void wifiOn() {
+        System.out.println("I am now connected to WiFi.");
     }
 }
 

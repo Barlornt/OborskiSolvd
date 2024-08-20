@@ -9,5 +9,14 @@ public class Main {
         Product computer = new Computer("x-Kom","XYZ123", 5500.00, true, "Intel Core i5-12400F", "MSI GeForce RTX 3050", 32, keyboard, pcMonitor, mouse);
 
 
+        // interfaces HW
+        Powerable computer1 = new Computer("x-Kom","XYZ321", 5500.00, true, "Intel Core i5-12400F", "MSI GeForce RTX 3050", 32, keyboard, pcMonitor, mouse);
+        computer1.powerOn();
+        computer1.powerOff();
+
+        Computer computer2 = new Computer("x-Kom","XYZ321", 5500.00, true, "Intel Core i5-12400F", "MSI GeForce RTX 3050", 32, keyboard, pcMonitor, mouse);
+        computer2.wifiOn();
+
+
     }
 }
