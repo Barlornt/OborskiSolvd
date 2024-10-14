@@ -8,7 +8,7 @@ import java.io.File;
 public class DOMParser {
     public static void main(String[] args) {
         try {
-            File inputFile = new File("employees.xml");
+            File inputFile = new File("employee.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(inputFile);
