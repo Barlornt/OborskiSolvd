@@ -5,24 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faf42878-ad90-4de3-86c1-807defd6c628" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/MoborskiSolvdHW2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/out/production/MoborskiSolvdHW2/Computer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/out/production/MoborskiSolvdHW2/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/out/production/MoborskiSolvdHW2/Keyboard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/out/production/MoborskiSolvdHW2/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/out/production/MoborskiSolvdHW2/Monitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/out/production/MoborskiSolvdHW2/Mouse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/src/Computer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/src/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/src/Keyboard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/src/Monitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoborskiSolvdHW2/src/Mouse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/employee.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employees.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/employees.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/JAXB/JAXBParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/JAXB/JAXBParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/dao/jdbc/ManagerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/dao/jdbc/ManagerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/model/Role.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -40,14 +43,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Barlo/Desktop/Course projcs/OborskiSolvd/OborskiSolvd-master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Barlo/Desktop/Course projcs/OborskiSolvd/OborskiSolvd-master&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Barlo\Desktop\SolvdJMySqlOborskim\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="JAXBParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.solvd.JAXB.JAXBParser" />
+      <module name="SolvdJMySqlOborskim" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.solvd.JAXB.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JAXBParser" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

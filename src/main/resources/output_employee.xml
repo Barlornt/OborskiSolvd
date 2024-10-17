@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employees>
+    <employee>
+        <employeeId>1</employeeId>
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <departmentId>101</departmentId>
+        <roleId>2</roleId>
+        <hireDate>2024-10-17</hireDate>
+        <salary>50000.0</salary>
+        <roles/>
+    </employee>
+    <employee>
+        <employeeId>2</employeeId>
+        <firstName>Jane</firstName>
+        <lastName>Smith</lastName>
+        <departmentId>102</departmentId>
+        <roleId>3</roleId>
+        <hireDate>2024-10-17</hireDate>
+        <salary>60000.0</salary>
+        <roles/>
+    </employee>
+    <employees>
+        <employeeId>1</employeeId>
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <departmentId>101</departmentId>
+        <roleId>2</roleId>
+        <hireDate>2024-10-17</hireDate>
+        <salary>50000.0</salary>
+        <roles/>
+    </employees>
+    <employees>
+        <employeeId>2</employeeId>
+        <firstName>Jane</firstName>
+        <lastName>Smith</lastName>
+        <departmentId>102</departmentId>
+        <roleId>3</roleId>
+        <hireDate>2024-10-17</hireDate>
+        <salary>60000.0</salary>
+        <roles/>
+    </employees>
+</employees>

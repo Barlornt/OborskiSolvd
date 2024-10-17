@@ -2,6 +2,7 @@ package com.solvd.dao.jdbc;
 
 import com.solvd.model.Employee;
 import com.solvd.model.Manager;
+import com.solvd.model.Role;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,8 @@ public class ManagerDAO extends EmployeeDAO {
     public Manager getEntityById(int id) {
         String query = "SELECT * FROM employees WHERE employee_id = ? AND role_id = ?";  // Assuming role_id corresponds to Manager
         Manager manager = null;
+        List<Role> roles = new ArrayList<>(); // Create an empty list for roles
+
         try (Connection connection = getConnection(); PreparedStatement ps = prepareStatement(connection, query)) {
             ps.setInt(1, id);
             ps.setInt(2, 1);  // Assuming role_id 1 corresponds to Manager
@@ -29,6 +32,7 @@ public class ManagerDAO extends EmployeeDAO {
                         rs.getInt("role_id"),
                         rs.getDate("hire_date").toLocalDate(),
                         rs.getDouble("salary"),
+                        roles, // Pass the empty roles list
                         rs.getInt("team_size"),  // Assuming you store team size
                         rs.getString("department_managed")  // Assuming you store department managed
                 );
@@ -55,6 +59,7 @@ public class ManagerDAO extends EmployeeDAO {
                         rs.getInt("role_id"),
                         rs.getDate("hire_date").toLocalDate(),
                         rs.getDouble("salary"),
+                        new ArrayList<>(), // Pass an empty list for roles
                         rs.getInt("team_size"),
                         rs.getString("department_managed")
                 );

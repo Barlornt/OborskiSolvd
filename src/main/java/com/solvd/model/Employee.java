@@ -1,6 +1,7 @@
 package com.solvd.model;
 
 import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class Employee {
     private int roleId;
 
     @XmlElement(name = "hireDate")
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     private LocalDate hireDate;
 
     @XmlElement(name = "salary")
@@ -33,6 +35,8 @@ public class Employee {
     @XmlElement(name = "role")
     private List<Role> roles;
 
+    public Employee() {
+    }
     public Employee(int employeeId, String firstName, String lastName, int departmentId, int roleId, LocalDate hireDate, double salary, List<Role> roles) {
         this.employeeId = employeeId;
         this.firstName = firstName;

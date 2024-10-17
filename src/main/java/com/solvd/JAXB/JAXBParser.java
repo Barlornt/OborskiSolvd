@@ -1,7 +1,7 @@
 package com.solvd.JAXB;
 
 import com.solvd.model.Employee;
-import com.solvd.model.Role;
+import com.solvd.model.EmployeeList;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -16,29 +16,36 @@ import java.util.List;
 public class JAXBParser {
     public static void main(String[] args) {
         try {
-            JAXBContext context = JAXBContext.newInstance(Employee.class);
+            JAXBContext context = JAXBContext.newInstance(EmployeeList.class);
 
             Unmarshaller unmarshaller = context.createUnmarshaller();
-            Employee employee = (Employee) unmarshaller.unmarshal(new File("employees.xml"));
-            System.out.println("Unmarshalled Employee: " + employee.getFullName());
+            EmployeeList employeeList = (EmployeeList) unmarshaller.unmarshal(new File("src/main/resources/employee.xml"));
 
-            List<Role> roles = employee.getRoles();
-            for (Role role : roles) {
-                System.out.println("Role: " + role.getRoleName());
+            for (Employee employee : employeeList.getEmployees()) {
+                System.out.println("Unmarshalled Employee: " + employee.getFullName());
             }
 
         } catch (JAXBException e) {
             e.printStackTrace();
         }
 
+
+        //Test for unmarshaling to output_employee.xml
+        EmployeeList newEmployeeList = new EmployeeList();
+        List<Employee> employeeList = new ArrayList<>();
+        employeeList.add(new Employee(1, "John", "Doe", 101, 2, LocalDate.now(), 50000, new ArrayList<>()));
+        employeeList.add(new Employee(2, "Jane", "Smith", 102, 3, LocalDate.now(), 60000, new ArrayList<>()));
+
+        newEmployeeList.setEmployees(employeeList);
+
+
         try {
-            JAXBContext context = JAXBContext.newInstance(Employee.class);
+            JAXBContext context = JAXBContext.newInstance(EmployeeList.class);
 
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-            Employee newEmployee = new Employee(3, "Alice", "Johnson", 101, 2, LocalDate.now(), 70000, new ArrayList<>());
-            marshaller.marshal(newEmployee, new File("output_employee.xml"));
+            marshaller.marshal(newEmployeeList, new File("src/main/resources/output_employee.xml"));
 
         } catch (JAXBException e) {
             e.printStackTrace();

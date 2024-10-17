@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import java.time.LocalDate;
+import java.util.List;
 
 @XmlRootElement(name = "manager")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -16,8 +17,8 @@ public class Manager extends Employee {
     @XmlElement(name = "departmentManaged")
     private String departmentManaged;
 
-    public Manager(int employeeId, String firstName, String lastName, int departmentId, int roleId, LocalDate hireDate, double salary, int teamSize, String departmentManaged) {
-        super(employeeId, firstName, lastName, departmentId, roleId, hireDate, salary);
+    public Manager(int employeeId, String firstName, String lastName, int departmentId, int roleId, LocalDate hireDate, double salary, List<Role> roles, int teamSize, String departmentManaged) {
+        super(employeeId, firstName, lastName, departmentId, roleId, hireDate, salary, roles);
         this.teamSize = teamSize;
         this.departmentManaged = departmentManaged;
     }

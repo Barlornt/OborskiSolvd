@@ -18,6 +18,8 @@ public class Role {
     @XmlElement(name = "departmentId")
     private int departmentId;
 
+    public Role() {
+    }
     public Role(int roleId, String roleName, int departmentId) {
         this.roleId = roleId;
         this.roleName = roleName;
