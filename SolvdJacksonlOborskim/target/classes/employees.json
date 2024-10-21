@@ -1,0 +1,36 @@
+{
+  "employees": [
+    {
+      "employeeId": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "departmentId": 101,
+      "roleId": 1,
+      "hireDate": "2023-12-01",
+      "salary": 50000,
+      "roles": [
+        {
+          "roleId": 1,
+          "roleName": "Manager",
+          "departmentId": 101
+        }
+      ]
+    },
+    {
+      "employeeId": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "departmentId": 102,
+      "roleId": 2,
+      "hireDate": "2024-01-15",
+      "salary": 60000,
+      "roles": [
+        {
+          "roleId": 2,
+          "roleName": "Developer",
+          "departmentId": 102
+        }
+      ]
+    }
+  ]
+}

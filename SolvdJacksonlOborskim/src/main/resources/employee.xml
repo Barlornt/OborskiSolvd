@@ -1,0 +1,20 @@
+<employees>
+    <employee>
+        <employeeId>1</employeeId>
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <departmentId>101</departmentId>
+        <roleId>2</roleId>
+        <hireDate>2024-01-01</hireDate>
+        <salary>50000</salary>
+    </employee>
+    <employee>
+        <employeeId>2</employeeId>
+        <firstName>Jane</firstName>
+        <lastName>Smith</lastName>
+        <departmentId>102</departmentId>
+        <roleId>3</roleId>
+        <hireDate>2024-03-01</hireDate>
+        <salary>60000</salary>
+    </employee>
+</employees>
